@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace SecurityOfficersTerminal.Views
 {
-    public partial class SelectTimeDepartureModalForm : Form
+    public partial class ModalWindowForm : Form
     {
-        public SelectTimeDepartureModalForm()
+        public int id;
+        public ModalWindowForm()
         {
             InitializeComponent();
         }
+        
     }
 }
