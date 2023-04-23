@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace SecurityOfficersTerminal.Views
 {
+    // 9404040
     public partial class ModalWindowForm : Form
     {
         public int id;
@@ -17,6 +18,13 @@ namespace SecurityOfficersTerminal.Views
         {
             InitializeComponent();
         }
-        
+
+        private void ModalWindowForm_Load(object sender, EventArgs e)
+        {
+            dateTimePicker.Value = DateTime.Now;
+            dateTimePicker.Enabled = false;
+        }
+
+
     }
 }

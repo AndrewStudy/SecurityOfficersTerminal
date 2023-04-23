@@ -79,9 +79,10 @@ namespace SecurityOfficersTerminal.Views
 
             if (e.RowIndex >= 0)
             {
-                ModalWindowForm NewForm = new ModalWindowForm();
+                ModalWindowAccessForm NewForm = new ModalWindowAccessForm();
 
                 int id = selectedRow;
+                NewForm.InputTextBox(id +1);
 
                 NewForm.id = id + 1;
 
@@ -90,6 +91,13 @@ namespace SecurityOfficersTerminal.Views
                 this.Show();
             }
                 
+        }
+
+        
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

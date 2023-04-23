@@ -61,11 +61,17 @@
     <Compile Include="Views\ListPassesViewForm.Designer.cs">
       <DependentUpon>ListPassesViewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ModalWindowForm.cs">
+    <Compile Include="Views\ModalWindowFinishForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ModalWindowForm.Designer.cs">
-      <DependentUpon>ModalWindowForm.cs</DependentUpon>
+    <Compile Include="Views\ModalWindowFinishForm.Designer.cs">
+      <DependentUpon>ModalWindowFinishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModalWindowAccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModalWindowAccessForm.Designer.cs">
+      <DependentUpon>ModalWindowAccessForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,8 +88,11 @@
     <EmbeddedResource Include="Views\ListPassesViewForm.resx">
       <DependentUpon>ListPassesViewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ModalWindowForm.resx">
-      <DependentUpon>ModalWindowForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ModalWindowFinishForm.resx">
+      <DependentUpon>ModalWindowFinishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModalWindowAccessForm.resx">
+      <DependentUpon>ModalWindowAccessForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

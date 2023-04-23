@@ -29,8 +29,8 @@ namespace SecurityOfficersTerminal.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RefreshTableButton = new System.Windows.Forms.Button();
             this.PassesListGridView = new System.Windows.Forms.DataGridView();
             this.SearchButton = new System.Windows.Forms.Button();
@@ -55,18 +55,18 @@ namespace SecurityOfficersTerminal.Views
             this.PassesListGridView.AllowUserToDeleteRows = false;
             this.PassesListGridView.AllowUserToResizeColumns = false;
             this.PassesListGridView.AllowUserToResizeRows = false;
-            this.PassesListGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
-            this.PassesListGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.PassesListGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.PassesListGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.PassesListGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.PassesListGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PassesListGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.PassesListGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PassesListGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.PassesListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PassesListGridView.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
             this.PassesListGridView.Location = new System.Drawing.Point(12, 55);
@@ -74,9 +74,9 @@ namespace SecurityOfficersTerminal.Views
             this.PassesListGridView.Name = "PassesListGridView";
             this.PassesListGridView.ReadOnly = true;
             this.PassesListGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PassesListGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PassesListGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.PassesListGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.PassesListGridView.ShowCellErrors = false;
             this.PassesListGridView.ShowRowErrors = false;
@@ -101,18 +101,22 @@ namespace SecurityOfficersTerminal.Views
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(297, 26);
             this.SearchTextBox.TabIndex = 5;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // ListPassesViewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 412);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.RefreshTableButton);
             this.Controls.Add(this.PassesListGridView);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ListPassesViewForm";
-            this.Text = "ListPassesViewForm";
+            this.ShowIcon = false;
+            this.Text = "Терминал сотрудника охраны: Список заявок";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListPassesViewForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.PassesListGridView)).EndInit();
             this.ResumeLayout(false);
